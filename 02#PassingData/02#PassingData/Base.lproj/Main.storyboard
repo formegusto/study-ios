@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_2_PassingData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메인화면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpf-rW-IQx">
+                                <rect key="frame" x="177.5" y="438" width="59" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Nfj-bq-vNm">
+                                <rect key="frame" x="90.5" y="474.5" width="233.5" height="148"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfx-MZ-tDk">
+                                        <rect key="frame" x="0.0" y="0.0" width="233.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="PassingData#1 InstanceProperty"/>
+                                        <connections>
+                                            <action selector="moveToInstanceProperty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g0v-Tt-z40"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXI-9m-nCy">
+                                        <rect key="frame" x="33.5" y="39" width="166" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="PassingData#2 Segue"/>
+                                        <connections>
+                                            <segue destination="KHK-rY-LNp" kind="show" identifier="mySegue" id="Zag-iN-aBo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AG1-A0-dHM">
+                                        <rect key="frame" x="0.5" y="78" width="232" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="PassingData#3 ReverseInstance"/>
+                                        <connections>
+                                            <action selector="moveToReverseInstance:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kso-h3-JPW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3G-9Y-Qol">
+                                        <rect key="frame" x="25" y="117" width="183" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="PassingData#4 Delegate"/>
+                                        <connections>
+                                            <action selector="moveToDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNv-3D-dK5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nfj-bq-vNm" firstAttribute="top" secondItem="Gpf-rW-IQx" secondAttribute="bottom" constant="16" id="Oyo-f7-7DW"/>
+                            <constraint firstItem="Gpf-rW-IQx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VVm-rY-YHC"/>
+                            <constraint firstItem="Nfj-bq-vNm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r1Q-nI-WUJ"/>
+                            <constraint firstItem="Gpf-rW-IQx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ss7-dg-Lm1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainMessage" destination="Gpf-rW-IQx" id="Gjd-0O-aQZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="123.88392857142857"/>
+        </scene>
+        <!--Segue View Controller-->
+        <scene sceneID="FyI-pp-fOV">
+            <objects>
+                <viewController id="KHK-rY-LNp" customClass="SegueViewController" customModule="_2_PassingData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ukf-z1-S62">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PassingData#2 Segue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MA-LL-xLa">
+                                <rect key="frame" x="123" y="410.5" width="168" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrx-hK-m4A">
+                                <rect key="frame" x="180" y="439.5" width="54" height="14.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="epW-jL-aAy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lrx-hK-m4A" firstAttribute="top" secondItem="7MA-LL-xLa" secondAttribute="bottom" constant="8" id="Khm-Zc-9SS"/>
+                            <constraint firstItem="7MA-LL-xLa" firstAttribute="centerX" secondItem="Ukf-z1-S62" secondAttribute="centerX" id="Xhr-xc-1wI"/>
+                            <constraint firstItem="7MA-LL-xLa" firstAttribute="centerY" secondItem="Ukf-z1-S62" secondAttribute="centerY" id="eaA-DS-zEH"/>
+                            <constraint firstItem="Lrx-hK-m4A" firstAttribute="centerX" secondItem="Ukf-z1-S62" secondAttribute="centerX" id="ndt-UO-vub"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rgW-2q-cVI"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="Lrx-hK-m4A" id="JYB-pP-l07"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XVd-jq-Czj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="124"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
