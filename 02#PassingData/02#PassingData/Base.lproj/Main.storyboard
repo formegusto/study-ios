@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Nfj-bq-vNm">
-                                <rect key="frame" x="90.5" y="474.5" width="233.5" height="148"/>
+                                <rect key="frame" x="90.5" y="474.5" width="233.5" height="226"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfx-MZ-tDk">
                                         <rect key="frame" x="0.0" y="0.0" width="233.5" height="31"/>
@@ -56,6 +56,22 @@
                                         <buttonConfiguration key="configuration" style="plain" title="PassingData#4 Delegate"/>
                                         <connections>
                                             <action selector="moveToDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNv-3D-dK5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbk-nF-H3w">
+                                        <rect key="frame" x="29.5" y="156" width="174.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="PassingData#5 Closure"/>
+                                        <connections>
+                                            <action selector="moveToClosure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61B-f6-Wx4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQ0-Ur-GuH">
+                                        <rect key="frame" x="16.5" y="195" width="200" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="PassingData#6 Notification"/>
+                                        <connections>
+                                            <action selector="moveToNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="caJ-iK-Vf5"/>
                                         </connections>
                                     </button>
                                 </subviews>

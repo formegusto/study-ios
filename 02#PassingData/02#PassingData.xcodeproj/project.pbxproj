@@ -20,6 +20,10 @@
 		8D8B508C28741892003071EC /* ReverseInstanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D8B508A28741892003071EC /* ReverseInstanceViewController.xib */; };
 		8D8B508F28741CDA003071EC /* DelegateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8B508D28741CDA003071EC /* DelegateViewController.swift */; };
 		8D8B509028741CDA003071EC /* DelegateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D8B508E28741CDA003071EC /* DelegateViewController.xib */; };
+		8D9C361028757A9B0064FC88 /* ClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9C360E28757A9B0064FC88 /* ClosureViewController.swift */; };
+		8D9C361128757A9B0064FC88 /* ClosureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D9C360F28757A9B0064FC88 /* ClosureViewController.xib */; };
+		8D9C3614287588D90064FC88 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9C3612287588D90064FC88 /* NotificationViewController.swift */; };
+		8D9C3615287588D90064FC88 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D9C3613287588D90064FC88 /* NotificationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		8D8B508A28741892003071EC /* ReverseInstanceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReverseInstanceViewController.xib; sourceTree = "<group>"; };
 		8D8B508D28741CDA003071EC /* DelegateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateViewController.swift; sourceTree = "<group>"; };
 		8D8B508E28741CDA003071EC /* DelegateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DelegateViewController.xib; sourceTree = "<group>"; };
+		8D9C360E28757A9B0064FC88 /* ClosureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureViewController.swift; sourceTree = "<group>"; };
+		8D9C360F28757A9B0064FC88 /* ClosureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClosureViewController.xib; sourceTree = "<group>"; };
+		8D9C3612287588D90064FC88 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		8D9C3613287588D90064FC88 /* NotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,8 @@
 				8D8B506B28740A53003071EC /* AppDelegate.swift */,
 				8D8B506D28740A53003071EC /* SceneDelegate.swift */,
 				8D8B506F28740A53003071EC /* ViewController.swift */,
+				8D9C3612287588D90064FC88 /* NotificationViewController.swift */,
+				8D9C3613287588D90064FC88 /* NotificationViewController.xib */,
 				8D8B508D28741CDA003071EC /* DelegateViewController.swift */,
 				8D8B508E28741CDA003071EC /* DelegateViewController.xib */,
 				8D8B508728741660003071EC /* SegueViewController.swift */,
@@ -84,6 +94,8 @@
 				8D8B507428740A58003071EC /* Assets.xcassets */,
 				8D8B507628740A58003071EC /* LaunchScreen.storyboard */,
 				8D8B507928740A58003071EC /* Info.plist */,
+				8D9C360E28757A9B0064FC88 /* ClosureViewController.swift */,
+				8D9C360F28757A9B0064FC88 /* ClosureViewController.xib */,
 			);
 			path = "02#PassingData";
 			sourceTree = "<group>";
@@ -151,6 +163,8 @@
 				8D8B507828740A58003071EC /* LaunchScreen.storyboard in Resources */,
 				8D8B507528740A58003071EC /* Assets.xcassets in Resources */,
 				8D8B507328740A53003071EC /* Main.storyboard in Resources */,
+				8D9C3615287588D90064FC88 /* NotificationViewController.xib in Resources */,
+				8D9C361128757A9B0064FC88 /* ClosureViewController.xib in Resources */,
 				8D8B509028741CDA003071EC /* DelegateViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,8 +178,10 @@
 			files = (
 				8D8B508528740B45003071EC /* InstancePropertyViewController.swift in Sources */,
 				8D8B507028740A53003071EC /* ViewController.swift in Sources */,
+				8D9C361028757A9B0064FC88 /* ClosureViewController.swift in Sources */,
 				8D8B508B28741892003071EC /* ReverseInstanceViewController.swift in Sources */,
 				8D8B508F28741CDA003071EC /* DelegateViewController.swift in Sources */,
+				8D9C3614287588D90064FC88 /* NotificationViewController.swift in Sources */,
 				8D8B506C28740A53003071EC /* AppDelegate.swift in Sources */,
 				8D8B508828741660003071EC /* SegueViewController.swift in Sources */,
 				8D8B506E28740A53003071EC /* SceneDelegate.swift in Sources */,

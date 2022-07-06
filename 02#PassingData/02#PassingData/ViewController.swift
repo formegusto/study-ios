@@ -6,6 +6,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let notificationName = Notification.Name("send msg from notification")
+        NotificationCenter.default.addObserver(self, selector: #selector(receiveFromNotification), name: notificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        // Remove
+        // NotificationCenter.default.removeObserver(self, name: notificationName, object: nil)
+    }
+    
+    @objc func keyboardWillShow() {
+        print("Will Show")
+    }
+    
+    @objc func receiveFromNotification(notification: Notification) {
+        if let str = notification.userInfo?["msg"] as? String {
+            self.mainMessage?.text = str
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,6 +60,16 @@ class ViewController: UIViewController {
         delegateVC.delegate = self
         
         self.present(delegateVC, animated: true)
+    }
+    @IBAction func moveToClosure(_ sender: Any) {
+        let closureVC = ClosureViewController(nibName: "ClosureViewController", bundle: nil)
+        closureVC.myClosure = { self.mainMessage.text = $0 }
+        self.present(closureVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func moveToNotification(_ sender: Any) {
+        let notificationVC = NotificationViewController(nibName: "NotificationViewController", bundle: nil)
+        self.present(notificationVC, animated: true, completion: nil)
     }
 }
 
