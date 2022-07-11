@@ -13,7 +13,7 @@
 
 - **Cocoa Touch Class Config**
 
-![Untitled](02#PassingData%20f790fd81fc154f18b6a2f7fdad2b556b/Untitled.png)
+<img width="719" alt="Untitled" src="https://user-images.githubusercontent.com/52296323/177518832-5a145df8-5b0a-4dae-bd35-d65cffafd17e.png">
 
 **[ XIB ]** iOS에서 Xib, Nib 라는 용어가 등장한다. 이들은 User Interface Field를 저장하기 위한 파일이다. Nib는 Binary 형태, Xib는 xml 형태를 띈다.
 
@@ -55,15 +55,15 @@ self.present(instancePropertyVC, animated: true, completion: nil)
 
 - **StoryBoard Setting** - 2개의 ViewController를 준비해준다.
 
-![Untitled](02#PassingData%20f790fd81fc154f18b6a2f7fdad2b556b/Untitled%201.png)
+<img width="1680" alt="Untitled 1" src="https://user-images.githubusercontent.com/52296323/177518857-fc6f7ca2-b55f-4214-8545-f3efcc062e88.png">
 
 - **Chaning ViewController** - Button을 ViewController에 Ctrl을 누른상태에서 연결해주면 Action Segue 란이 나타난다. Show를 눌러주면 present 기능이 연결된다.
 
-![Untitled](02#PassingData%20f790fd81fc154f18b6a2f7fdad2b556b/Untitled%202.png)
+<img width="656" alt="Untitled 2" src="https://user-images.githubusercontent.com/52296323/177518868-3acb6594-6e7a-4d41-adcc-1ab4c0a8f85d.png">
 
 - **Setting Segue Name** - 화살표를 눌러주면 identifier를 설정할 수 있는데, 설정해준다. 추가적으로 화살표는 여러개를 만들 수 있다.
 
-![Untitled](02#PassingData%20f790fd81fc154f18b6a2f7fdad2b556b/Untitled%203.png)
+<img width="959" alt="Untitled 3" src="https://user-images.githubusercontent.com/52296323/177518896-a0ea0959-b591-468e-83d2-29bc65febd27.png">
 
 - **prepare function** - ViewController로 부터 override 할 수 있는 prepare 함수는 segue가 동작할 때 호출되는 함수 이다.
 
