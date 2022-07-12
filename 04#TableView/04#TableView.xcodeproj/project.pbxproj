@@ -17,6 +17,8 @@
 		8D957D50287D593D0001D12D /* TableViewPractice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D957D4F287D593D0001D12D /* TableViewPractice.storyboard */; };
 		8D957D53287D634E0001D12D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D957D52287D634E0001D12D /* SettingViewController.swift */; };
 		8D957D55287D636F0001D12D /* SettingApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D957D54287D636F0001D12D /* SettingApp.storyboard */; };
+		8D957D58287D6E240001D12D /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D957D56287D6E240001D12D /* ProfileCell.swift */; };
+		8D957D59287D6E240001D12D /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D957D57287D6E240001D12D /* ProfileCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		8D957D4F287D593D0001D12D /* TableViewPractice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableViewPractice.storyboard; sourceTree = "<group>"; };
 		8D957D52287D634E0001D12D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		8D957D54287D636F0001D12D /* SettingApp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingApp.storyboard; sourceTree = "<group>"; };
+		8D957D56287D6E240001D12D /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		8D957D57287D6E240001D12D /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		8D957D36287D57D60001D12D /* 04#TableView */ = {
 			isa = PBXGroup;
 			children = (
+				8D957D5A287D6E2A0001D12D /* NiB */,
 				8D957D51287D59510001D12D /* View */,
 				8D957D4E287D59250001D12D /* Storyboard */,
 				8D957D4B287D58A40001D12D /* Controller */,
@@ -99,8 +104,17 @@
 		8D957D51287D59510001D12D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8D957D56287D6E240001D12D /* ProfileCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8D957D5A287D6E2A0001D12D /* NiB */ = {
+			isa = PBXGroup;
+			children = (
+				8D957D57287D6E240001D12D /* ProfileCell.xib */,
+			);
+			path = NiB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +178,7 @@
 				8D957D44287D57DE0001D12D /* LaunchScreen.storyboard in Resources */,
 				8D957D50287D593D0001D12D /* TableViewPractice.storyboard in Resources */,
 				8D957D55287D636F0001D12D /* SettingApp.storyboard in Resources */,
+				8D957D59287D6E240001D12D /* ProfileCell.xib in Resources */,
 				8D957D41287D57DE0001D12D /* Assets.xcassets in Resources */,
 				8D957D3F287D57D60001D12D /* Main.storyboard in Resources */,
 			);
@@ -179,6 +194,7 @@
 				8D957D53287D634E0001D12D /* SettingViewController.swift in Sources */,
 				8D957D3C287D57D60001D12D /* MainController.swift in Sources */,
 				8D957D38287D57D60001D12D /* AppDelegate.swift in Sources */,
+				8D957D58287D6E240001D12D /* ProfileCell.swift in Sources */,
 				8D957D4D287D58E20001D12D /* TableViewPracticeViewController.swift in Sources */,
 				8D957D3A287D57D60001D12D /* SceneDelegate.swift in Sources */,
 			);
