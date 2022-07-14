@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,32 +16,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ig-4N-CVj">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dx3-zi-WcL">
+                                <rect key="frame" x="16" y="144" width="382" height="718"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0S-4y-kcp">
+                                <rect key="frame" x="16" y="92" width="382" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoB-ya-P0a">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="36"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="32"/>
+                                        <color key="textColor" red="0.027450980392156862" green="0.027450980392156862" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="multiply" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QOo-6m-Yw8">
+                                        <rect key="frame" x="350" y="3" width="32" height="25.5"/>
+                                        <color key="tintColor" red="0.027450980392156862" green="0.027450980392156862" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="EAW-oM-AIS"/>
+                                            <constraint firstAttribute="height" constant="32" id="bze-Pa-wci"/>
+                                        </constraints>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QOo-6m-Yw8" firstAttribute="top" secondItem="b0S-4y-kcp" secondAttribute="top" id="B0m-oF-v65"/>
+                                    <constraint firstAttribute="trailing" secondItem="QOo-6m-Yw8" secondAttribute="trailing" id="CFi-px-6fU"/>
+                                    <constraint firstItem="QOo-6m-Yw8" firstAttribute="leading" secondItem="OoB-ya-P0a" secondAttribute="trailing" id="FUL-Dc-7iE"/>
+                                    <constraint firstItem="QOo-6m-Yw8" firstAttribute="leading" secondItem="OoB-ya-P0a" secondAttribute="trailing" id="Irr-6b-rA5"/>
+                                    <constraint firstItem="OoB-ya-P0a" firstAttribute="leading" secondItem="b0S-4y-kcp" secondAttribute="leading" id="RJ5-gc-qTh"/>
+                                    <constraint firstItem="OoB-ya-P0a" firstAttribute="top" secondItem="b0S-4y-kcp" secondAttribute="top" id="qZT-7v-RXa"/>
+                                    <constraint firstAttribute="bottom" secondItem="OoB-ya-P0a" secondAttribute="bottom" id="yKh-Mw-8Pj"/>
+                                    <constraint firstAttribute="height" constant="36" id="zj3-cS-jv8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.92941176470588238" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0Ig-4N-CVj" secondAttribute="trailing" id="5e3-4C-Vyv"/>
-                            <constraint firstItem="0Ig-4N-CVj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="HzT-qs-FKW"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0Ig-4N-CVj" secondAttribute="bottom" id="UCB-yX-y1g"/>
-                            <constraint firstItem="0Ig-4N-CVj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wdu-dv-Mh0"/>
+                            <constraint firstItem="dx3-zi-WcL" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="BQW-P7-NzN"/>
+                            <constraint firstItem="dx3-zi-WcL" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-16" id="PfV-NM-WMc"/>
+                            <constraint firstItem="dx3-zi-WcL" firstAttribute="top" secondItem="b0S-4y-kcp" secondAttribute="bottom" constant="16" id="Pjo-CQ-xdu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="b0S-4y-kcp" secondAttribute="trailing" constant="16" id="diq-ju-jnB"/>
+                            <constraint firstItem="dx3-zi-WcL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="lGv-tK-f2P"/>
+                            <constraint firstItem="b0S-4y-kcp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="v6L-UL-6pi"/>
+                            <constraint firstItem="b0S-4y-kcp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="48" id="y7j-uv-NbL"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="settingTableView" destination="0Ig-4N-CVj" id="xfJ-JB-Tez"/>
+                        <outlet property="prevBtn" destination="QOo-6m-Yw8" id="WVb-7y-fre"/>
+                        <outlet property="settingTableView" destination="dx3-zi-WcL" id="Cii-xd-jgg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="70" y="124"/>
+            <point key="canvasLocation" x="69.565217391304358" y="123.88392857142857"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="multiply" catalog="system" width="128" height="111"/>
     </resources>
 </document>
