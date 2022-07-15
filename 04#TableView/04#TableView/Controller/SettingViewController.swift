@@ -4,12 +4,21 @@ class SettingViewController: UIViewController {
 
     @IBOutlet weak var settingTableView: UITableView!
     @IBOutlet weak var prevBtn: UIImageView!
-    let menuStore: [Menu] = [
+
+    var menuStore: [[Menu]] = [
+        [
         Menu("airplane", UIColor(red: 250 / 255, green: 129 / 255, blue: 2 / 255, alpha: 1), "에어플레인 모드"),
-        Menu("wifi", UIColor(red: 9 / 255, green: 95 / 255, blue: 253 / 255, alpha: 1), "Wi-Fi"),
-        Menu("bonjour", UIColor(red: 9 / 255, green: 95 / 255, blue: 253 / 255, alpha: 1), "Bluetooth"),
-        Menu("antenna.radiowaves.left.and.right", UIColor(red: 46 / 255, green: 192 / 255, blue: 70 / 255, alpha: 1), "셀룰러"),
-        Menu("personalhotspot", UIColor(red: 46 / 255, green: 192 / 255, blue: 70 / 255, alpha: 1), "개인용 핫스팟")
+         Menu("wifi", UIColor(red: 9 / 255, green: 95 / 255, blue: 253 / 255, alpha: 1), "Wi-Fi"),
+         Menu("bonjour", UIColor(red: 9 / 255, green: 95 / 255, blue: 253 / 255, alpha: 1), "Bluetooth"),
+         Menu("antenna.radiowaves.left.and.right", UIColor(red: 46 / 255, green: 192 / 255, blue: 70 / 255, alpha: 1), "셀룰러"),
+         Menu("personalhotspot", UIColor(red: 46 / 255, green: 192 / 255, blue: 70 / 255, alpha: 1), "개인용 핫스팟")
+        ],
+        [
+        Menu("bell.badge.fill", UIColor(red: 249 / 255, green: 35 / 255, blue: 37 / 255, alpha: 1), "알림"),
+         Menu("speaker.wave.3.fill", UIColor(red: 249 / 255, green: 12 / 255, blue: 67 / 255, alpha: 1), "사운드 및 햅틱"),
+         Menu("moon.fill", UIColor(red: 68 / 255, green: 59 / 255, blue: 204 / 255, alpha: 1), "집중 모드"),
+        Menu("hourglass", UIColor(red: 68 / 255, green: 59 / 255, blue: 204 / 255, alpha: 1), "스크린 타임"),
+        ]
     ]
     
     override func viewDidLoad() {
@@ -21,7 +30,7 @@ class SettingViewController: UIViewController {
         
         self.settingTableView.separatorStyle = .none
         
-        
+         
         self.settingTableView.dataSource = self
         self.settingTableView.delegate = self
         
@@ -42,10 +51,8 @@ extension SettingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
-        } else if section == 1 {
-            return menuStore.count
         } else {
-            return 0
+            return menuStore[section - 1].count
         }
     }
     
@@ -60,15 +67,15 @@ extension SettingViewController: UITableViewDataSource {
             cell = self.settingTableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath)
             
             (cell as! MenuCell).setViewStyle(isFirst: indexPath.row == 0 ? true : false
-                                             ,isLast:indexPath.row == menuStore.count - 1 ? true : false,
-                                             menu: menuStore[indexPath.row])
+                                             ,isLast:indexPath.row == menuStore[indexPath.section - 1].count - 1 ? true : false,
+                                             menu: menuStore[indexPath.section - 1][indexPath.row])
         }
         
         return cell!
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return menuStore.count + 1
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
