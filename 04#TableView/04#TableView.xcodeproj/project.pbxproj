@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8D2992D9287EA2340087F16D /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2992D7287EA2340087F16D /* MenuCell.swift */; };
 		8D2992DA287EA2340087F16D /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2992D8287EA2340087F16D /* MenuCell.xib */; };
+		8D29D8B428856649005DBA93 /* MyIdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D29D8B228856649005DBA93 /* MyIdViewController.swift */; };
+		8D29D8B528856649005DBA93 /* MyIdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D29D8B328856649005DBA93 /* MyIdViewController.xib */; };
 		8D9420ED28800DEB00BC2248 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9420EC28800DEB00BC2248 /* Menu.swift */; };
 		8D957D38287D57D60001D12D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D957D37287D57D60001D12D /* AppDelegate.swift */; };
 		8D957D3A287D57D60001D12D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D957D39287D57D60001D12D /* SceneDelegate.swift */; };
@@ -22,11 +24,15 @@
 		8D957D55287D636F0001D12D /* SettingApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D957D54287D636F0001D12D /* SettingApp.storyboard */; };
 		8D957D58287D6E240001D12D /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D957D56287D6E240001D12D /* ProfileCell.swift */; };
 		8D957D59287D6E240001D12D /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D957D57287D6E240001D12D /* ProfileCell.xib */; };
+		8DA0C3E5288164BE001805A6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA0C3E4288164BE001805A6 /* DetailViewController.swift */; };
+		8DA0C3E7288164C9001805A6 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA0C3E6288164C9001805A6 /* DetailViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8D2992D7287EA2340087F16D /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		8D2992D8287EA2340087F16D /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		8D29D8B228856649005DBA93 /* MyIdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIdViewController.swift; sourceTree = "<group>"; };
+		8D29D8B328856649005DBA93 /* MyIdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyIdViewController.xib; sourceTree = "<group>"; };
 		8D9420EC28800DEB00BC2248 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		8D957D34287D57D60001D12D /* 04#TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "04#TableView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D957D37287D57D60001D12D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +48,8 @@
 		8D957D54287D636F0001D12D /* SettingApp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingApp.storyboard; sourceTree = "<group>"; };
 		8D957D56287D6E240001D12D /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		8D957D57287D6E240001D12D /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		8DA0C3E4288164BE001805A6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8DA0C3E6288164C9001805A6 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,8 @@
 			children = (
 				8D957D4C287D58E10001D12D /* TableViewPracticeViewController.swift */,
 				8D957D52287D634E0001D12D /* SettingViewController.swift */,
+				8DA0C3E4288164BE001805A6 /* DetailViewController.swift */,
+				8D29D8B228856649005DBA93 /* MyIdViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -112,6 +122,7 @@
 			children = (
 				8D957D4F287D593D0001D12D /* TableViewPractice.storyboard */,
 				8D957D54287D636F0001D12D /* SettingApp.storyboard */,
+				8DA0C3E6288164C9001805A6 /* DetailViewController.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -130,6 +141,7 @@
 			children = (
 				8D957D57287D6E240001D12D /* ProfileCell.xib */,
 				8D2992D8287EA2340087F16D /* MenuCell.xib */,
+				8D29D8B328856649005DBA93 /* MyIdViewController.xib */,
 			);
 			path = NiB;
 			sourceTree = "<group>";
@@ -192,12 +204,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DA0C3E7288164C9001805A6 /* DetailViewController.storyboard in Resources */,
 				8D957D44287D57DE0001D12D /* LaunchScreen.storyboard in Resources */,
 				8D957D50287D593D0001D12D /* TableViewPractice.storyboard in Resources */,
 				8D2992DA287EA2340087F16D /* MenuCell.xib in Resources */,
 				8D957D55287D636F0001D12D /* SettingApp.storyboard in Resources */,
 				8D957D59287D6E240001D12D /* ProfileCell.xib in Resources */,
 				8D957D41287D57DE0001D12D /* Assets.xcassets in Resources */,
+				8D29D8B528856649005DBA93 /* MyIdViewController.xib in Resources */,
 				8D957D3F287D57D60001D12D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,10 +223,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DA0C3E5288164BE001805A6 /* DetailViewController.swift in Sources */,
 				8D2992D9287EA2340087F16D /* MenuCell.swift in Sources */,
 				8D957D53287D634E0001D12D /* SettingViewController.swift in Sources */,
 				8D9420ED28800DEB00BC2248 /* Menu.swift in Sources */,
 				8D957D3C287D57D60001D12D /* MainController.swift in Sources */,
+				8D29D8B428856649005DBA93 /* MyIdViewController.swift in Sources */,
 				8D957D38287D57D60001D12D /* AppDelegate.swift in Sources */,
 				8D957D58287D6E240001D12D /* ProfileCell.swift in Sources */,
 				8D957D4D287D58E20001D12D /* TableViewPracticeViewController.swift in Sources */,

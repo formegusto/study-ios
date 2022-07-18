@@ -7,12 +7,10 @@ class MenuCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var iconImage: UIImageView!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        
     }
-    
     
     func setViewStyle(isFirst: Bool?, isLast: Bool?, menu: Menu) -> Void {
         if (isFirst != nil) && isFirst! {

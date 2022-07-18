@@ -18,8 +18,13 @@ class MainController: UIViewController {
     @IBAction func moveToSetting(_ sender: Any) {
         let settingApp = UIStoryboard(name: "SettingApp", bundle: nil)
         let settingVC = settingApp.instantiateViewController(identifier: "SettingViewController") as SettingViewController
-        settingVC.modalPresentationStyle = .fullScreen
-        self.present(settingVC, animated: true, completion: nil)
+//        settingVC.modalPresentationStyle = .fullScreen
+        
+        let settingNC = UINavigationController(rootViewController: settingVC)
+        settingNC.modalPresentationStyle = .fullScreen
+        
+        self.navigationController?.present(settingNC, animated: true, completion: nil)
+//        self.present(settingVC, animated: true, completion: nil)
     }
 }
 

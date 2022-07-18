@@ -34,13 +34,25 @@ class SettingViewController: UIViewController {
         self.settingTableView.dataSource = self
         self.settingTableView.delegate = self
         
-        self.setEvent()
+        self.title = "설정"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        let closeBtn = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(prevBtnAction))
+        self.navigationItem.rightBarButtonItem = closeBtn
+//        self.setEvent()
     }
     
-    func setEvent() {
-        self.prevBtn.isUserInteractionEnabled = true
-        self.prevBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(prevBtnAction)))
+//    override func viewWillAppear(_ animated: Bool) {
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
+//    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
+    
+//    func setEvent() {
+//        self.prevBtn.isUserInteractionEnabled = true
+//        self.prevBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(prevBtnAction)))
+//    }
     
     @objc func prevBtnAction(_ sender: UITapGestureRecognizer) {
         self.dismiss(animated: true, completion: nil)
@@ -59,34 +71,37 @@ extension SettingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell: UITableViewCell?
+        
         
         if indexPath.section == 0 {
-            cell = self.settingTableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath)
+            let cell = self.settingTableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
+            cell.selectionStyle = .none
+            return cell
         } else {
-            cell = self.settingTableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath)
+            let cell = self.settingTableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuCell
             
-            (cell as! MenuCell).setViewStyle(isFirst: indexPath.row == 0 ? true : false
+            cell.setViewStyle(isFirst: indexPath.row == 0 ? true : false
                                              ,isLast:indexPath.row == menuStore[indexPath.section - 1].count - 1 ? true : false,
                                              menu: menuStore[indexPath.section - 1][indexPath.row])
+            cell.selectionStyle = .none
+            return cell
         }
-        
-        return cell!
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return menuStore.count + 1
     }
+
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat(16)
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = UIView()
-        header.backgroundColor = .clear
-        return header
-    }
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return CGFloat(16)
+//    }
+//
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let header = UIView()
+//        header.backgroundColor = .clear
+//        return header
+//    }
     
 }
 
@@ -99,6 +114,21 @@ extension SettingViewController: UITableViewDelegate {
 //                return 48
 //        }
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        if indexPath.section == 0 {
+            let myIdVC = MyIdViewController(nibName: "MyIdViewController", bundle: nil)
+            self.present(myIdVC, animated: true, completion: nil)
+        } else {
+            let storyboard = UIStoryboard(name: "DetailViewController", bundle: nil)
+            let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+            detailVC.title = menuStore[indexPath.section - 1][indexPath.row].title
+            
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
     
 }
