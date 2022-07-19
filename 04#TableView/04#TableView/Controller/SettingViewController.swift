@@ -71,11 +71,11 @@ extension SettingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
+        tableView.deselectRow(at: indexPath, animated: true)
         
         if indexPath.section == 0 {
             let cell = self.settingTableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
-            cell.selectionStyle = .none
+//            cell.selectionStyle = .none
             return cell
         } else {
             let cell = self.settingTableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuCell
@@ -83,7 +83,7 @@ extension SettingViewController: UITableViewDataSource {
             cell.setViewStyle(isFirst: indexPath.row == 0 ? true : false
                                              ,isLast:indexPath.row == menuStore[indexPath.section - 1].count - 1 ? true : false,
                                              menu: menuStore[indexPath.section - 1][indexPath.row])
-            cell.selectionStyle = .none
+//            cell.selectionStyle = .none
             return cell
         }
     }
