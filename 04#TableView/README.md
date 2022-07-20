@@ -31,13 +31,13 @@ iOS의 TableView는 단일 열에 세로로 스크롤되는 Contents들의 행�
 
 ## UITableView Basic With Storyboard
 
-![Untitled](04#TableView,%20Navigation%20Controller%208d6b79e36aeb43dface2490a6490f58f/Untitled.png)
+<img width="748" alt="Untitled" src="https://user-images.githubusercontent.com/52296323/179961838-c715f421-c307-4fd0-b2f7-b6066f654e43.png">
 
 TableView는 Cell을 관리하는 UITableView와 Cell을 나타내는 UITableViewCell이 있다.
 
 **[ ReusableCell ]**
 
-![Untitled](04#TableView,%20Navigation%20Controller%208d6b79e36aeb43dface2490a6490f58f/Untitled%201.png)
+<img width="996" alt="Untitled 1" src="https://user-images.githubusercontent.com/52296323/179961855-b9517b84-8be6-47cf-ac00-6b09861cef44.png">
 
 Cell을 Table에 배치하는 방법은 재사용가능한 Cell로서 이용하는 것 이다. 이를 통해 알 수 있는 점은 iOS가 Component 혹은 Atom 단위의 UI Programming을 선호하는 것을 알 수가 있다. 재사용가능한 셀로서 불러올 수 있도록 TableViewCell Component에 ID를 설정해준다.
 
@@ -89,7 +89,7 @@ extension TableViewPracticeViewController : UITableViewDelegate {
 
 **[ ProfileCell.xib ]**
 
-![Untitled](04#TableView,%20Navigation%20Controller%208d6b79e36aeb43dface2490a6490f58f/Untitled%202.png)
+<img width="741" alt="Untitled 2" src="https://user-images.githubusercontent.com/52296323/179961877-ca222725-f345-45fc-ab2e-1e08fdc44f75.png">
 
 기본적인 Cell의 모양을 정의해준다.
 
@@ -130,7 +130,7 @@ extension SettingViewController: UITableViewDelegate {
 
 원래는 위와 같이 UITableViewDelegate에 heightForRowAt을 가지고 있는 메서드를 구현해줌으로써, Cell의 높이 지정을 해준다. 높이 지정을 해주지 않을 경우에는 셀 안에 컨텐츠 크기에 상관없이 기본값의 크기로 나타난다.
 
-![Untitled](04#TableView,%20Navigation%20Controller%208d6b79e36aeb43dface2490a6490f58f/Untitled%203.png)
+<img width="785" alt="Untitled 3" src="https://user-images.githubusercontent.com/52296323/179961910-cda9421a-d341-4cb8-8822-6fb991f7b818.png">
 
 하지만 셀에서 가장 큰 크기를 차지하고 있는 컨텐츠의 auto layout 기능을 사용해주면 자동으로 Cell 크기가 auto layout 설정에 의해 크기가 잡힌다. 하지만 이 또한 Delegate의 heightForRowAt의 설정에 따라 이루어지는 것 이다.
 
@@ -171,11 +171,11 @@ func tableView(_ tableView: UITableView,
 
 ## Model
 
-![Untitled](04#TableView,%20Navigation%20Controller%208d6b79e36aeb43dface2490a6490f58f/Untitled%204.png)
+<img width="1210" alt="Untitled 4" src="https://user-images.githubusercontent.com/52296323/179961941-4c75b8bf-8bde-4a63-a7bc-3eb15b892da5.png">
 
 Setting App의 구조를 보게되면, 아이콘 이미지, 제목, 그리고 chevron 으로 구성되어 있다.
 
-![Untitled](04#TableView,%20Navigation%20Controller%208d6b79e36aeb43dface2490a6490f58f/Untitled%205.png)
+<img width="794" alt="Untitled 5" src="https://user-images.githubusercontent.com/52296323/179961961-cfd655b8-6835-4433-a3f6-e66751d80f3d.png">
 
 유사한 모양으로 Menu Cell을 구성해준다.
 
@@ -214,7 +214,7 @@ Store를 구성해주고, indexPath.row, section 값을 잘 이용해서 테이�
 
 XCode는 기본적으로 Navigation Controller 생성을 지원해준다.
 
-![Untitled](04#TableView,%20Navigation%20Controller%208d6b79e36aeb43dface2490a6490f58f/Untitled%206.png)
+<img width="948" alt="Untitled 6" src="https://user-images.githubusercontent.com/52296323/179961986-424b2709-3bc5-4f9c-9f22-11c001e5a98c.png">
 
 ## Navigation Controller Header
 
