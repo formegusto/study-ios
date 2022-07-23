@@ -51,7 +51,7 @@ required init?(coder: NSCoder) {
 }
 ```
 
-![Untitled](05#GestureEvent%203225f612fa7945c3ba9e19a024847c57/Untitled.png)
+<img width="1015" alt="Untitled" src="https://user-images.githubusercontent.com/52296323/180604090-1476bc93-a522-4d31-a64a-e114fffa3bd4.png">
 
 이와 같이 interface builder에 의해 생성되도록 하는 것에 제한을 둘 수 있다. 무조건 코드로 만들어라라는 의미로 사용할 수 있도록 가능!
 
@@ -159,7 +159,7 @@ UIView 에는 위치(origin)와 크기(size)를 나타내기 위한 CGRect를 �
 
 ## Segmented Control
 
-![Untitled](05#GestureEvent%203225f612fa7945c3ba9e19a024847c57/Untitled%201.png)
+<img width="723" alt="Untitled 1" src="https://user-images.githubusercontent.com/52296323/180604099-2616d3cb-01b9-4605-9227-82a98556ac02.png">
 
 **[ Action: Value Changed ]**
 
