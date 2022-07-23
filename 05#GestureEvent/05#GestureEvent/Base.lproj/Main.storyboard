@@ -15,8 +15,29 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7hZ-gM-6ej">
+                                <rect key="frame" x="0.0" y="44" width="414" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="aJ4-Dq-R12"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="X"/>
+                                    <segment title="Y"/>
+                                    <segment title="XY"/>
+                                </segments>
+                                <connections>
+                                    <action selector="setXY:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xdo-YP-4CT"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7hZ-gM-6ej" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BeY-Tt-hFz"/>
+                            <constraint firstItem="7hZ-gM-6ej" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qyy-L8-aWz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7hZ-gM-6ej" secondAttribute="trailing" id="hjW-AX-Dtv"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
